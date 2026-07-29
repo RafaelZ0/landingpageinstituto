@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-navy-900 antialiased;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 32s linear infinite;
+}
+.marquee-track[data-paused='true'] {
+  animation-play-state: paused;
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Scroll-reveal: plain CSS transitions driven by IntersectionObserver.
+   Deliberately not GSAP-tweened here — tween playback depends on gsap's
+   rAF ticker, which some environments (throttled/backgrounded tabs) can
+   stall, leaving content permanently invisible. CSS transitions are
+   compositor-driven and keep working regardless. */
+.scroll-reveal-item {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-reveal-item.is-visible {
+  opacity: 1;
+  transform: none;
+}
+.scroll-reveal-item:nth-child(1) { transition-delay: 0ms; }
+.scroll-reveal-item:nth-child(2) { transition-delay: 70ms; }
+.scroll-reveal-item:nth-child(3) { transition-delay: 140ms; }
+.scroll-reveal-item:nth-child(4) { transition-delay: 210ms; }
+.scroll-reveal-item:nth-child(5) { transition-delay: 280ms; }
+.scroll-reveal-item:nth-child(6) { transition-delay: 350ms; }
+.scroll-reveal-item:nth-child(7) { transition-delay: 420ms; }
+.scroll-reveal-item:nth-child(8) { transition-delay: 490ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Hero entrance: plain CSS keyframes (compositor-driven, not gsap/rAF
+   dependent) so the hero is never at risk of getting stuck invisible. */
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-anim {
+  opacity: 0;
+  animation: hero-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-anim {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+}
