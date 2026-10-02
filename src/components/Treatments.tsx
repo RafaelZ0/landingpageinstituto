@@ -1,4 +1,4 @@
-import { Bandaids, Medal, ScanSmiley, Smiley, Sparkle, Sun, Tooth, SprayBottle, WhatsappLogo, type Icon } from '@phosphor-icons/react'
+import { Bandaids, Medal, PuzzlePiece, Smiley, Sparkle, Sun, Tooth, SprayBottle, WhatsappLogo, type Icon } from '@phosphor-icons/react'
 import { IMPLANT_WHATSAPP_MESSAGE, DEFAULT_WHATSAPP_MESSAGE, whatsappLink } from '../lib/constants'
 import ScrollReveal from './ScrollReveal'
 
@@ -24,9 +24,9 @@ const OTHER_TREATMENTS: { icon: Icon; title: string; text: string }[] = [
     text: 'Cobrem imperfeições e deixam seu sorriso mais branco, brilhante e harmonioso rapidamente.',
   },
   {
-    icon: ScanSmiley,
-    title: 'Harmonização Facial',
-    text: 'Intensifica seus traços naturais, com aparência de pele mais jovem e firme.',
+    icon: PuzzlePiece,
+    title: 'Restauração Dentária',
+    text: 'Recupera dentes com cárie ou fraturados, devolvendo função, conforto e estética natural.',
   },
   {
     icon: Medal,

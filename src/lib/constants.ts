@@ -27,7 +27,7 @@ export const INSTAGRAM_URL = 'https://www.instagram.com/drpablosantos/'
 export const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=100086234714964'
 
 export const GOOGLE_RATING = 4.9
-export const GOOGLE_REVIEW_COUNT = 156
+export const GOOGLE_REVIEW_COUNT = 202
 
 export const CRO = 'CRO-ES 005206'
 export const EPAO = 'EPAO: 2556'

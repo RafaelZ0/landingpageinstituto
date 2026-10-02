@@ -1,7 +1,7 @@
 import { Star } from '@phosphor-icons/react'
 
 const ITEMS = [
-  '4,9 ★ no Google · 156 avaliações',
+  '4,9 ★ no Google · 202 avaliações',
   '+20 anos de experiência do Dr. Pablo',
   'Tecnologia entre as mais avançadas da América Latina',
   'Especialistas em Implante Dentário',

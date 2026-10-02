@@ -1,5 +1,5 @@
 import { FacebookLogo, InstagramLogo } from '@phosphor-icons/react'
-import Logo from './Logo'
+import logoFull from '../assets/logo-full-light.png'
 import {
   ADDRESS_LINE1,
   ADDRESS_LINE2,
@@ -17,7 +17,15 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between sm:gap-10">
           <div className="max-w-xs">
-            <Logo variant="light" />
+            <img
+              src={logoFull}
+              alt="Instituto Odontológico Dr. Pablo Santos"
+              width={900}
+              height={526}
+              loading="lazy"
+              decoding="async"
+              className="h-24 w-auto sm:h-28"
+            />
             <p className="mt-4 text-sm leading-relaxed text-navy-300">
               Referência em implantes dentários e odontologia de alta tecnologia em Cachoeiro de Itapemirim - ES.
             </p>

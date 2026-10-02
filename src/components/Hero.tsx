@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
-import { Star, Tooth, WhatsappLogo } from '@phosphor-icons/react'
+import { Star, WhatsappLogo } from '@phosphor-icons/react'
+import doctorHero from '../assets/doctor-hero.webp'
 import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT, IMPLANT_WHATSAPP_MESSAGE, whatsappLink } from '../lib/constants'
 import { ensureGsap, prefersReducedMotion } from '../lib/gsapSetup'
 
@@ -112,19 +113,26 @@ export default function Hero() {
           style={{ animationDelay: '0.35s' }}
         >
           <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-gold-500/20 to-navy-600/10 blur-2xl" />
-          <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-navy-800/60 p-6 shadow-soft backdrop-blur sm:p-8 lg:p-10">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-gold-400/30 bg-gold-500/10 text-gold-300 sm:h-14 sm:w-14 lg:h-16 lg:w-16">
-              <Tooth size={24} weight="light" className="sm:hidden" />
-              <Tooth size={30} weight="light" className="hidden sm:block" />
+          <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-navy-800/60 shadow-soft backdrop-blur">
+            <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[4/5]">
+              <img
+                src={doctorHero}
+                alt="Dr. Pablo Santos de Oliveira, implantodontista"
+                width={760}
+                height={950}
+                decoding="async"
+                className="h-full w-full object-cover object-top"
+              />
+              <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-navy-900 via-navy-900/70 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7">
+                <p className="font-display text-lg font-semibold text-white sm:text-xl">Dr. Pablo Santos de Oliveira</p>
+                <p className="mt-1 text-sm text-navy-100/90">Doutor em Implantodontia · Mestre em Ortodontia</p>
+                <p className="mt-0.5 text-xs text-gold-300">CRO-ES 005206</p>
+              </div>
             </div>
-            <p className="mt-6 font-display text-lg italic text-white sm:mt-8 sm:text-xl lg:text-2xl">
+            <p className="p-5 font-display text-base italic leading-snug text-white sm:p-7 sm:text-lg">
               "Nosso objetivo é trazer para você as tecnologias mais avançadas da odontologia."
             </p>
-            <div className="mt-6 border-t border-white/10 pt-5 sm:mt-8">
-              <p className="font-display text-lg font-semibold text-white">Dr. Pablo Santos de Oliveira</p>
-              <p className="mt-1 text-sm text-navy-200">Doutor em Implantodontia · Mestre em Ortodontia</p>
-              <p className="mt-0.5 text-xs text-navy-400">CRO-ES 005206</p>
-            </div>
           </div>
         </div>
       </div>

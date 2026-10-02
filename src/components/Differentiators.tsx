@@ -1,5 +1,5 @@
 import { ClipboardText, Cpu, HandHeart, SealCheck, Snowflake, ShieldStar, Tooth, UsersThree, type Icon } from '@phosphor-icons/react'
-import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from '../lib/constants'
+import { GOOGLE_RATING } from '../lib/constants'
 import ScrollReveal from './ScrollReveal'
 
 const ITEMS: { icon: Icon; title: string; text: string; featured?: boolean }[] = [
@@ -22,7 +22,7 @@ const ITEMS: { icon: Icon; title: string; text: string; featured?: boolean }[] =
   {
     icon: UsersThree,
     title: 'Equipe multidisciplinar',
-    text: 'Implantodontia, ortodontia, prótese e harmonização facial sob o mesmo teto, com profissionais dedicados a cada área.',
+    text: 'Implantodontia, ortodontia, prótese e clínica geral sob o mesmo teto, com profissionais dedicados a cada área.',
   },
   {
     icon: Snowflake,
@@ -42,7 +42,7 @@ const ITEMS: { icon: Icon; title: string; text: string; featured?: boolean }[] =
   {
     icon: SealCheck,
     title: 'Aprovação real dos pacientes',
-    text: `Nota ${GOOGLE_RATING} no Google com mais de ${GOOGLE_REVIEW_COUNT} avaliações — a prova de que nosso cuidado faz diferença.`,
+    text: `Nota ${GOOGLE_RATING} no Google com mais de 200 avaliações — a prova de que nosso cuidado faz diferença.`,
   },
 ]
 

@@ -1,25 +1,38 @@
+import { HandHeart, HeartStraight, Medal, Stethoscope, UsersThree, WhatsappLogo, type Icon } from '@phosphor-icons/react'
 import ScrollReveal from './ScrollReveal'
 
-const TEAM = [
-  { name: 'Graziele (Grazi)', role: 'Atendimento e recepção' },
-  { name: 'Luana', role: 'Atendimento e recepção' },
-  { name: 'Pâmela', role: 'Atendimento e recepção' },
-  { name: 'Jaylane', role: 'Atendimento e recepção' },
-  { name: 'Cindy', role: 'Orientação e suporte ao paciente' },
-  { name: 'Letícia', role: 'Auxiliar odontológica' },
-  { name: 'Dra. Ludimila', role: 'Odontologia' },
-  { name: 'Lucyan e Rômulo', role: 'Protéticos' },
+const TEAM: { icon: Icon; title: string; text: string }[] = [
+  {
+    icon: HandHeart,
+    title: 'Recepção acolhedora',
+    text: 'Simpatia e atenção desde a chegada — um dos pontos mais elogiados pelos pacientes.',
+  },
+  {
+    icon: WhatsappLogo,
+    title: 'Atendimento no WhatsApp',
+    text: 'Dúvidas esclarecidas com clareza e paciência, do primeiro contato ao agendamento.',
+  },
+  {
+    icon: Stethoscope,
+    title: 'Dentistas especialistas',
+    text: 'Profissionais que explicam cada etapa do tratamento e transmitem segurança.',
+  },
+  {
+    icon: UsersThree,
+    title: 'Auxiliares dedicadas',
+    text: 'Apoio atencioso durante todo o atendimento, para você se sentir tranquilo na cadeira.',
+  },
+  {
+    icon: Medal,
+    title: 'Protéticos especializados',
+    text: 'Próteses de alta precisão, com trabalho impecável e acabamento cuidadoso.',
+  },
+  {
+    icon: HeartStraight,
+    title: 'Acompanhamento pós-cirúrgico',
+    text: 'Orientação e contato próximo depois do procedimento, para saber como você está.',
+  },
 ]
-
-function initials(name: string) {
-  return name
-    .split(' ')
-    .filter((w) => w.length > 2 || /^[A-ZÀ-Ú]/.test(w))
-    .slice(0, 2)
-    .map((w) => w[0])
-    .join('')
-    .toUpperCase()
-}
 
 export default function Team() {
   return (
@@ -31,24 +44,27 @@ export default function Team() {
             Uma equipe que os pacientes fazem questão de elogiar
           </h2>
           <p className="mt-4 leading-relaxed text-navy-600">
-            Esses são alguns dos nomes que mais aparecem, com carinho, nas avaliações reais dos nossos
-            pacientes no Google.
+            Cuidado humanizado em cada etapa — é o que mais aparece, com carinho, nas avaliações reais dos
+            nossos pacientes no Google.
           </p>
         </ScrollReveal>
 
-        <ScrollReveal stagger="[data-card]" className="mt-8 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-5 sm:grid-cols-3 lg:grid-cols-4">
-          {TEAM.map((member) => (
+        <ScrollReveal
+          stagger="[data-card]"
+          className="mt-8 grid grid-cols-1 gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-6"
+        >
+          {TEAM.map((item) => (
             <div
-              key={member.name}
+              key={item.title}
               data-card
-              className="scroll-reveal-item flex flex-col items-center gap-2.5 rounded-2xl border border-navy-200 bg-navy-50 px-3 py-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-gold-300 hover:shadow-soft sm:gap-3 sm:px-4 sm:py-8"
+              className="scroll-reveal-item group flex items-start gap-4 rounded-2xl border border-navy-200 bg-navy-50 p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-gold-300 hover:shadow-soft sm:p-6"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-gold-400/40 bg-navy-900 font-display text-base font-semibold text-gold-300 sm:h-14 sm:w-14 sm:text-lg">
-                {initials(member.name)}
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy-900 text-gold-300">
+                <item.icon size={22} weight="light" />
               </div>
               <div>
-                <p className="text-sm font-semibold text-navy-900">{member.name}</p>
-                <p className="mt-0.5 text-xs text-navy-500">{member.role}</p>
+                <h3 className="font-display text-base font-semibold text-navy-900 sm:text-lg">{item.title}</h3>
+                <p className="mt-1 text-sm leading-relaxed text-navy-600">{item.text}</p>
               </div>
             </div>
           ))}

@@ -1,6 +1,6 @@
 import { CheckCircle } from '@phosphor-icons/react'
 import { CRO, EPAO } from '../lib/constants'
-import PhotoPlaceholder from './PhotoPlaceholder'
+import doctorAbout from '../assets/doctor-about.webp'
 import ScrollReveal from './ScrollReveal'
 
 const CREDENTIALS = [
@@ -14,12 +14,19 @@ export default function About() {
   return (
     <section id="sobre" className="bg-white py-14 sm:py-20 lg:py-28">
       <div className="mx-auto grid max-w-6xl gap-8 px-5 sm:gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-16 lg:px-8">
-        <ScrollReveal className="mx-auto w-full max-w-xs lg:mx-0">
-          <PhotoPlaceholder
-            label="Dr. Pablo Santos de Oliveira"
-            hint="Adicione aqui uma foto profissional em alta resolução"
-            className="aspect-[3/4] w-full"
-          />
+        <ScrollReveal className="mx-auto w-full max-w-xs pr-4 lg:mx-0 lg:max-w-sm">
+          <div className="relative isolate">
+            <div className="absolute left-4 top-4 -z-10 h-full w-full rounded-[1.75rem] border border-gold-400/60" aria-hidden="true" />
+            <img
+              src={doctorAbout}
+              alt="Dr. Pablo Santos de Oliveira, doutor em implantodontia e mestre em ortodontia"
+              width={900}
+              height={1200}
+              loading="lazy"
+              decoding="async"
+              className="aspect-[3/4] w-full rounded-[1.75rem] object-cover shadow-soft"
+            />
+          </div>
         </ScrollReveal>
 
         <ScrollReveal>

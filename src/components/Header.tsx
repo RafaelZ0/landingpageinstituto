@@ -30,7 +30,7 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8">
         <a href="#topo" className="shrink-0">
-          <Logo variant="light" />
+          <Logo />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">

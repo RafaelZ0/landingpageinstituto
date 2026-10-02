@@ -1,11 +1,33 @@
-import { Armchair, Buildings, DoorOpen, type Icon } from '@phosphor-icons/react'
-import PhotoPlaceholder from './PhotoPlaceholder'
+import fachada from '../assets/fachada.webp'
+import recepcao from '../assets/recepcao.webp'
+import consultorio from '../assets/consultorio.webp'
 import ScrollReveal from './ScrollReveal'
 
-const SPOTS: { label: string; icon: Icon }[] = [
-  { label: 'Fachada do Instituto', icon: Buildings },
-  { label: 'Recepção', icon: DoorOpen },
-  { label: 'Sala de atendimento', icon: Armchair },
+const PHOTOS = [
+  {
+    src: fachada,
+    alt: 'Fachada do Instituto Odontológico Dr. Pablo Santos em Cachoeiro de Itapemirim',
+    label: 'Nossa fachada',
+    width: 900,
+    height: 1339,
+    span: 'sm:row-span-2',
+  },
+  {
+    src: recepcao,
+    alt: 'Recepção climatizada e acolhedora do Instituto',
+    label: 'Recepção',
+    width: 720,
+    height: 720,
+    span: '',
+  },
+  {
+    src: consultorio,
+    alt: 'Consultório equipado onde o Dr. Pablo conversa com o paciente sobre o tratamento',
+    label: 'Consultório',
+    width: 720,
+    height: 720,
+    span: '',
+  },
 ]
 
 export default function Gallery() {
@@ -27,12 +49,26 @@ export default function Gallery() {
 
         <ScrollReveal
           stagger="[data-card]"
-          className="-mx-5 mt-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 sm:mx-0 sm:mt-8 sm:grid sm:grid-cols-3 sm:gap-6 sm:overflow-visible sm:px-0 sm:pb-0"
+          className="-mx-5 mt-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 sm:mx-0 sm:mt-8 sm:grid sm:h-[560px] sm:grid-cols-2 sm:grid-rows-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:h-[680px] lg:gap-6"
         >
-          {SPOTS.map((s) => (
-            <div key={s.label} data-card className="scroll-reveal-item w-[72vw] max-w-[280px] shrink-0 snap-start sm:w-auto sm:max-w-none sm:shrink">
-              <PhotoPlaceholder label={s.label} hint="Envie uma foto profissional para substituir este espaço" className="aspect-[4/3] w-full" />
-            </div>
+          {PHOTOS.map((p) => (
+            <figure
+              key={p.label}
+              data-card
+              className={`scroll-reveal-item group relative aspect-[3/4] w-[72vw] max-w-[280px] shrink-0 snap-start overflow-hidden rounded-2xl bg-navy-100 shadow-sm sm:aspect-auto sm:w-auto sm:max-w-none sm:shrink ${p.span}`}
+            >
+              <img
+                src={p.src}
+                alt={p.alt}
+                width={p.width}
+                height={p.height}
+                loading="lazy"
+                decoding="async"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-navy-950/80 to-transparent" aria-hidden="true" />
+              <figcaption className="absolute bottom-3 left-4 text-sm font-semibold text-white">{p.label}</figcaption>
+            </figure>
           ))}
         </ScrollReveal>
       </div>
