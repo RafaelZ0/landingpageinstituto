@@ -125,7 +125,7 @@ export default function Testimonials() {
       <div className="relative mx-auto max-w-6xl px-5 lg:px-8">
         <ScrollReveal className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-xl">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-300">Depoimentos reais</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.14em] sm:tracking-[0.2em] text-gold-300">Depoimentos reais</span>
             <h2 className="mt-3 font-display text-3xl font-semibold text-white sm:text-4xl">
               O que dizem os nossos pacientes
             </h2>

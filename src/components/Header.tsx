@@ -67,13 +67,13 @@ export default function Header() {
 
       {open && (
         <div className="border-t border-white/10 bg-navy-900/95 px-5 py-5 backdrop-blur-lg lg:hidden">
-          <nav className="flex flex-col gap-5">
+          <nav className="flex flex-col">
             {LINKS.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="text-sm font-medium text-navy-100"
+                className="border-b border-white/5 py-3.5 text-base font-medium text-navy-100 active:text-gold-300"
               >
                 {l.label}
               </a>
@@ -82,7 +82,7 @@ export default function Header() {
               href={whatsappLink(DEFAULT_WHATSAPP_MESSAGE)}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-1 flex items-center justify-center gap-2 rounded-full bg-gold-500 px-4 py-3 text-sm font-semibold text-white"
+              className="mt-4 flex items-center justify-center gap-2 rounded-full bg-gold-500 px-4 py-4 text-base font-semibold text-white"
             >
               <WhatsappLogo size={18} weight="fill" />
               Agendar pelo WhatsApp

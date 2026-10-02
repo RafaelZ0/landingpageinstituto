@@ -30,7 +30,7 @@ export default function About() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-500">Quem cuida do seu sorriso</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.14em] sm:tracking-[0.2em] text-gold-500">Quem cuida do seu sorriso</span>
           <h2 className="mt-3 font-display text-3xl font-semibold text-navy-900 sm:text-4xl">
             Dr. Pablo Santos de Oliveira
           </h2>

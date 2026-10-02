@@ -39,7 +39,7 @@ export default function Team() {
     <section className="bg-white py-14 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <ScrollReveal className="max-w-2xl">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-500">Quem vai te receber</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.14em] sm:tracking-[0.2em] text-gold-500">Quem vai te receber</span>
           <h2 className="mt-3 font-display text-3xl font-semibold text-navy-900 sm:text-4xl">
             Uma equipe que os pacientes fazem questão de elogiar
           </h2>

@@ -35,7 +35,7 @@ export default function Gallery() {
     <section id="clinica" className="bg-navy-50/50 py-14 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <ScrollReveal className="max-w-2xl">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-500">Conheça o Instituto</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.14em] sm:tracking-[0.2em] text-gold-500">Conheça o Instituto</span>
           <h2 className="mt-3 font-display text-3xl font-semibold text-navy-900 sm:text-4xl">
             Um ambiente pensado para o seu conforto
           </h2>
@@ -49,7 +49,7 @@ export default function Gallery() {
 
         <ScrollReveal
           stagger="[data-card]"
-          className="-mx-5 mt-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 sm:mx-0 sm:mt-8 sm:grid sm:h-[560px] sm:grid-cols-2 sm:grid-rows-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:h-[680px] lg:gap-6"
+          className="no-scrollbar -mx-5 mt-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 sm:mx-0 sm:mt-8 sm:grid sm:h-[560px] sm:grid-cols-2 sm:grid-rows-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:h-[680px] lg:gap-6"
         >
           {PHOTOS.map((p) => (
             <figure

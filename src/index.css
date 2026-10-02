@@ -83,3 +83,7 @@ body {
     transform: none;
   }
 }
+
+/* Swipe rows: hide the native scrollbar (touch devices overlay it anyway) */
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }

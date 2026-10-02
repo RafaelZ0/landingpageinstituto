@@ -13,7 +13,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-950 py-10 text-navy-200 sm:py-14">
+    <footer className="bg-navy-950 pb-24 pt-10 text-navy-200 sm:py-14">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between sm:gap-10">
           <div className="max-w-xs">
@@ -51,7 +51,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-10 text-sm sm:flex sm:gap-16">
+          <div className="grid grid-cols-1 gap-8 text-sm sm:flex sm:gap-16">
             <div>
               <p className="font-semibold text-white">Contato</p>
               <p className="mt-3 text-navy-300">{ADDRESS_LINE1}</p>
@@ -61,12 +61,12 @@ export default function Footer() {
             </div>
             <div>
               <p className="font-semibold text-white">Navegação</p>
-              <ul className="mt-3 space-y-2 text-navy-300">
-                <li><a href="#tratamentos" className="hover:text-gold-300">Tratamentos</a></li>
-                <li><a href="#diferenciais" className="hover:text-gold-300">Diferenciais</a></li>
-                <li><a href="#clinica" className="hover:text-gold-300">A Clínica</a></li>
-                <li><a href="#depoimentos" className="hover:text-gold-300">Avaliações</a></li>
-                <li><a href="#localizacao" className="hover:text-gold-300">Localização</a></li>
+              <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-navy-300 sm:block sm:space-y-2">
+                <li><a href="#tratamentos" className="inline-block py-1.5 hover:text-gold-300 sm:py-0">Tratamentos</a></li>
+                <li><a href="#diferenciais" className="inline-block py-1.5 hover:text-gold-300 sm:py-0">Diferenciais</a></li>
+                <li><a href="#clinica" className="inline-block py-1.5 hover:text-gold-300 sm:py-0">A Clínica</a></li>
+                <li><a href="#depoimentos" className="inline-block py-1.5 hover:text-gold-300 sm:py-0">Avaliações</a></li>
+                <li><a href="#localizacao" className="inline-block py-1.5 hover:text-gold-300 sm:py-0">Localização</a></li>
               </ul>
             </div>
           </div>
